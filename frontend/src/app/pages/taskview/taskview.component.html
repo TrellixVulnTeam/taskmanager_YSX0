@@ -1,7 +1,7 @@
 <div class="centered-content">
   <div class="task-manager-container">
     <div class="sidebar background-white">
-      <div class="d-flex">
+      <div class="d-flex df">
         <h1 class="title text">Lists</h1>
         <button
           mat-mini-fab
@@ -17,7 +17,7 @@
       </div>
 
       <div class="list-menu">
-        <button mat-button class="list-menu-item"  *ngFor="let lists of list" [routerLink]="['/list', lists._id]" routerLinkActive="isActive" >
+        <button mat-button class="list-menu-item"  *ngFor="let lists of list" [routerLink]="['/list', lists._id]"  routerLinkActive="isActive" >
              {{lists.title}}
         </button>
 
@@ -28,11 +28,12 @@
     </div>
 
     <div class="task-list-container">
-      <div class="d-flex">
+      <div class="top-bar df">
+      <div class="d-flex dfd">
       <h1 class="title text">Tasks</h1>
       <button
       mat-mini-fab
-      class="search"
+      class="search bs"
       (click)="openTask()"
 
       aria-label="Example icon button with a delete icon"
@@ -41,6 +42,7 @@
       <mat-icon>add</mat-icon>
 
     </button>
+  </div>
   </div>
 
 
