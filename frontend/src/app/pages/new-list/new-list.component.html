@@ -1,0 +1,30 @@
+<div class="centered-content">
+  <div class="modal-box">
+    <div class="title">
+      <h2>Create a new List</h2>
+      <form class="example-form d-flex">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Enter Your Title</mat-label>
+
+          <input
+            matInput
+            #inputTitle
+            placeholder="Enter Your Title"
+            required="true "
+          />
+        </mat-form-field>
+        <button
+          mat-mini-fab
+          class="search m-2"
+          aria-label="Example icon button with a delete icon"
+          (click)="createNewList(inputTitle.value)"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-mini-fab class="search m-2" mat-dialog-close>
+          <mat-icon>close</mat-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

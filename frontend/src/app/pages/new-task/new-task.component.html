@@ -1,0 +1,39 @@
+<div class="centered-content">
+  <div class="modal-box">
+    <div class="title">
+      <h2>Create a new Task</h2>
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Enter Your Task</mat-label>
+          <input #taskForm matInput placeholder="Ex. Pizza" >
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Enter Your Name</mat-label>
+          <input  matInput placeholder="Ex. Pizza" >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea  matInput placeholder="Ex. It makes me feel...Yummy....." ></textarea>
+        </mat-form-field> -->
+        <button
+        mat-mini-fab
+        class="search m-2"
+        aria-label="Example icon button with a delete icon"
+        (click)="createNewTask(taskForm.value)"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-mini-fab class="search m-2" mat-dialog-close>
+
+        <mat-icon>close</mat-icon>
+      </button>
+      </form>
+
+
+
+    </div>
+  </div>
+</div>
+

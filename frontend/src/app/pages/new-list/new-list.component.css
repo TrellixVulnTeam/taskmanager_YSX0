@@ -1,0 +1,26 @@
+.modal-box {
+  min-height: 180px;
+  width: 100%;
+  max-width: 580px;
+  background: white;
+  border-radius: 5px;
+  padding: 35px;
+}
+
+
+
+.search {
+  background: linear-gradient(to right top, #673ab7, green);
+
+  color: #fff;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
