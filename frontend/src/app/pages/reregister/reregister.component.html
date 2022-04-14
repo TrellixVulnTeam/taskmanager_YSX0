@@ -1,0 +1,69 @@
+<div class="centered-content">
+
+  <div class="modal-box">
+    <mat-icon routerLink="/" class="iconFlipped">exit_to_app</mat-icon>
+    <h1 class="title text lt">Register</h1>
+
+    <form class="example-form">
+      <mat-label>Enter Your Name</mat-label>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. Pizza"[formControl]='name' required />
+        <mat-error *ngIf="name.invalid">{{ getNameMessage() }}</mat-error>
+      </mat-form-field>
+
+      <div class="example-container">
+
+
+          <mat-label>Enter Your Mail</mat-label>
+        <mat-form-field appearance="fill" class="example-full-width">
+
+          <input
+            matInput
+            placeholder="pat@example.com"
+            [formControl]="email"
+            required/>
+          <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+
+        </mat-form-field>
+
+
+        <mat-label>Enter your password</mat-label>
+        <mat-form-field appearance="fill" class="example-full-width">
+
+          <input matInput  placeholder="****" [type]="hide ? 'password' : 'text'" [formControl]="password" required />
+
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid">{{getPErrorMessage()}}</mat-error>
+
+        </mat-form-field>
+        <mat-password-strength
+         class="m-2"
+        #passwordComponent
+        [password]="password.value"
+      >
+      </mat-password-strength>
+        <mat-label >Confirm Your password</mat-label>
+        <mat-form-field appearance="fill" class="example-full-width">
+
+          <input matInput   placeholder="****" [type]="hide ? 'password' : 'text'" [formControl]="cPassword" required/>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid">{{getPErrorMessage()}}</mat-error>
+
+        </mat-form-field>
+        <mat-password-strength
+        *ngIf="password.invalid"
+        class="m-2"
+       #cPasswordComponent
+       [password]="cPassword.value"
+     >
+     </mat-password-strength>
+        <button mat-button class="search login example-full-width rb">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

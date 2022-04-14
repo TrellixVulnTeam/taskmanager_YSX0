@@ -7,67 +7,62 @@
           mat-mini-fab
           class="search"
           (click)="openDialog()"
-
           aria-label="Example icon button with a delete icon"
         >
-
           <mat-icon>add</mat-icon>
-
         </button>
       </div>
 
       <div class="list-menu">
-        <button mat-button class="list-menu-item"  *ngFor="let lists of list" [routerLink]="['/list', lists._id]"  routerLinkActive="isActive" >
-             {{lists.title}}
+        <button
+          mat-button
+          class="list-menu-item"
+          *ngFor="let lists of list"
+          [routerLink]="['/list', lists._id]"
+          routerLinkActive="isActive"
+        >
+          {{ lists.title }}
         </button>
 
         <!--[ngStyle]="{'color':routerLinkActive === 'is-active' ? 'white' : 'black'}" -->
+      </div>
+    </div>
+
+    <div class="task-list-container">
+      <div *ngIf="task">
+        <h1 class="title text">Tasks</h1>
+        <button
+          mat-mini-fab
+          class="search bs"
+          (click)="openTask()"
+          aria-label="Example icon button with a delete icon"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+
+
+      <!--Task Elements-->
+      <div *ngIf="task.length === 0" class="empty-state">Please Create a task To display</div>
+      <div class="task" *ngFor="let tasks of task">
+        <mat-accordion>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ tasks.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ tasks.name }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            {{ tasks.description }}
+          </mat-expansion-panel>
+        </mat-accordion>
 
 
       </div>
     </div>
 
-    <div class="task-list-container">
-      <div class="top-bar df">
-      <div class="d-flex dfd">
-      <h1 class="title text">Tasks</h1>
-      <button
-      mat-mini-fab
-      class="search bs"
-      (click)="openTask()"
-
-      aria-label="Example icon button with a delete icon"
-    >
-
-      <mat-icon>add</mat-icon>
-
-    </button>
-  </div>
-  </div>
-
-
-
-      <!--Task Elements-->
-      <div class="task" *ngFor="let tasks of task">
-
-        <mat-accordion>
-          <mat-expansion-panel hideToggle>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                 {{tasks.title}}
-              </mat-panel-title>
-              <mat-panel-description>
-                    {{tasks.name}}
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            {{tasks.description}}
-          </mat-expansion-panel>
-          </mat-accordion>
-
-      </div>
-
-
-
+    <div *ngIf="!task" class="empty-state">Please Select a List to Display the Task</div>
     </div>
   </div>
 </div>

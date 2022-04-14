@@ -1,0 +1,23 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.search{
+  background: linear-gradient(to right top, #673AB7,green);
+  color: #fff;
+}
+.lt {
+  margin-bottom: 10px;
+}
+.rb {
+  margin-top: 10px;
+}
+.iconFlipped {
+  transform: scale(-1);
+  margin-left: 90%;
+}

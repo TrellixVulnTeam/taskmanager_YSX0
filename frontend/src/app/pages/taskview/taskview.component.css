@@ -18,12 +18,17 @@
   width: 100%;
 }
 
+.empty-state {
+  font-size: 20px;
+  color: #673ab7;
+  justify-content: center;
+
+}
+
 .dfd{
   align-items: center;
 }
-.text {
-  color: #673ab7;
-}
+
 .search {
   background: linear-gradient(to right top, #673ab7, green);
 
@@ -87,10 +92,6 @@
 .top-bar {
   margin-bottom: 20px;
   display: flex;
-}
-.title {
-  flex-grow: 1;
-  margin: 0;
 }
 
 .task {

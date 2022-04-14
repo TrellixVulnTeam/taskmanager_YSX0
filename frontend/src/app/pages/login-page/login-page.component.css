@@ -1,0 +1,25 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+
+}
+
+.example-full-width{
+  width: 100%;
+}
+.lt {
+  margin-bottom: 10px;
+}
+.search{
+  background: linear-gradient(to right top, #673AB7,green);
+  color: #fff;
+}
+
+.lr {
+  margin-left: 60%;
+
+}
+.lr:hover {
+color: green;
+
+}
+

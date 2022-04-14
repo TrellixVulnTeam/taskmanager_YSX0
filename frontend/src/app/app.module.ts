@@ -9,6 +9,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { TaskviewComponent } from './pages/taskview/taskview.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ReregisterComponent } from './pages/reregister/reregister.component';
 
 
 
@@ -33,6 +36,8 @@ import { NewTaskComponent } from './pages/new-task/new-task.component';
     TaskviewComponent,
     NewListComponent,
     NewTaskComponent,
+    LoginPageComponent,
+    ReregisterComponent,
   ],
 
 
@@ -47,6 +52,7 @@ import { NewTaskComponent } from './pages/new-task/new-task.component';
     MatButtonModule,
     MatExpansionModule,
     HttpClientModule,
+    MatPasswordStrengthModule,
 
     MenubarModule,
     ReactiveFormsModule,

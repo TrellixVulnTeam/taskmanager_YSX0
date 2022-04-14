@@ -41,9 +41,24 @@ export class WebRequestService {
 
   }
 
+  login(email:string,password:string) {
+    return this.http.post(`${this.Root_Url}/api/v1/login`, {
+      email,
+      password
+    }, {
+      observe:'response'
+    });
+
+
+
+
+
+
+  }
 
 
 
 
 
 }
+

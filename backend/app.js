@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json())
 app.use(cors())
-app.use('/api/users',userRoutes)
+app.use('/api/v1',userRoutes)
 app.use('/api/v1',listRoutes)
 app.use('/api/v1',taskRoutes)
 

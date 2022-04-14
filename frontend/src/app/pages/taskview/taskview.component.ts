@@ -31,6 +31,7 @@ export class TaskviewComponent implements OnInit {
       }
     )
     this.allTask()
+    this.allList()
 
 
   }
@@ -47,6 +48,7 @@ export class TaskviewComponent implements OnInit {
       //  })
       this.allTask()
 
+
     })
 
 
@@ -60,6 +62,14 @@ export class TaskviewComponent implements OnInit {
 
      })
 
+  }
+
+
+  allList() {
+    this.taskService.getTasks(this.id).subscribe((task:any) => {
+      this.task = task
+      console.log()
+    })
   }
 
 
